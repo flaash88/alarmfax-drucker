@@ -1,0 +1,14 @@
+# Zugangsdaten - NIEMALS einchecken!
+config.ini
+
+# Logs
+*.log
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Editor
+.vscode/
+.idea/
