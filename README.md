@@ -108,12 +108,24 @@ printer_name = drucker-ff
 
 ### 5. Test
 
+Da der autorisierte Absender (`disponent@lfv.stmk.at`) extern ist und nicht einfach eine Test-Mail verschickt werden kann, testet man mit der eigenen E-Mail-Adresse:
+
+1. `config.ini` temporär anpassen:
+```ini
+[filter]
+allowed_sender = deine@eigene-mail.at
+```
+
+2. Skript starten:
 ```bash
-cd /home/pi/feuerwehr-drucker
+cd /home/pi/alarmfax-drucker
 python3 drucker.py
 ```
 
-Jetzt eine Test-Mail mit PDF-Anhang vom autorisierten Absender schicken und den Log beobachten. Alles OK? Dann weiter.
+3. Dir selbst eine Mail mit einem beliebigen PDF als Anhang schicken
+4. Nach max. 30 Sekunden sollte der Drucker anspringen und der Log eine Erfolgsmeldung zeigen
+
+5. Nach erfolgreichem Test `allowed_sender` wieder auf `disponent@lfv.stmk.at` zurücksetzen
 
 ### 6. Als Dienst einrichten (Autostart)
 
