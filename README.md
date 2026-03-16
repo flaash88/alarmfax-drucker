@@ -37,8 +37,8 @@ scp -r feuerwehr-drucker/ pi@<IP-DES-PI>:/home/pi/
 Oder per Git direkt auf dem Pi:
 
 ```bash
-git clone https://github.com/<dein-name>/feuerwehr-drucker.git
-cd feuerwehr-drucker
+git clone https://github.com/flaash88/alarmfax-drucker.git
+cd alarmfax-drucker
 ```
 
 ### 2. Abhängigkeiten installieren
